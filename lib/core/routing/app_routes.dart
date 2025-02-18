@@ -5,10 +5,13 @@ import 'package:flutter_application_1/features/ui/onboarding/onboarding_screen.d
 
 
 class AppRoutes {
+  
   Route generateRoute(RouteSettings settings) {
+    //this argument to pass data between screens
+    final argument = settings.arguments;
     switch (settings.name) {
       case Routes.onBoarderScreen:
-        return MaterialPageRoute(builder: (_) => const OnboardingScreen());
+        return MaterialPageRoute(builder: (_) =>  OnboardingScreen());
         case Routes.loginScreen:
         return MaterialPageRoute(builder: (_) => LoginScreen());
         default: return MaterialPageRoute(builder: (_) => Scaffold(
